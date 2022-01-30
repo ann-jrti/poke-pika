@@ -57,18 +57,40 @@ const renderPokemonStats = (pokemon) => {
     const pokemonSpeed = document.querySelector('.pikachu-speed')
     pokemonSpeed.innerHTML = pokemonSpeedObj;
 
-    const pokemonTotalObj = pokemon['stats'].map(s => s.base_stat).reduce((acc, prev) => acc + prev)
+    const pokemonTotalObj = pokemon.stats.map(s => s.base_stat).reduce((acc, prev) => acc + prev)
     const pokemonTotal = document.querySelector('.pikachu-total')
     pokemonTotal.innerHTML = pokemonTotalObj
+}
 
+const renderPokemonMoves = (pokemon) => {
+    let pokemonMoves = []
+    pokemon.moves.forEach((m, i) => {
+        if (i <= 10) {
+            pokemonMoves.push([`${m.move.name}`, `${m['version_group_details'][0].move_learn_method.name}`])
+        }
+    })
+    pokemonMoves.forEach(m => {
+        let pokemonTable = document.querySelector('.pokemon-moves-table')
+        let moveAndMethodHtml = `<tr>
+            <td class="pokemon-move">${m[0]}</td>
+            <td class="pokemon-method">${m[1]}</td>
+            </tr>
+            `
+        pokemonTable.insertAdjacentHTML('beforeend', moveAndMethodHtml)
+    })
 }
 
 const renderPokemonPreview = (pokemon) => {
     renderPokemonInfo(pokemon);
     renderPokemonImg(pokemon);
     renderPokemonStats(pokemon);
+    renderPokemonMoves(pokemon)
 }
 renderPokemonPreview(pikachu)
+
+
+
+
 
 
 //this function will call the require function to populate the pokemon template pages
@@ -83,5 +105,3 @@ function getAbilities(pokemon) {
     console.log(abilities)
     return abilities
 }
-
-console.log(getAbilities(pikachu))

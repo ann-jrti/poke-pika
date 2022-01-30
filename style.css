@@ -72,7 +72,7 @@ body {
 }
 
 span {
-  width: 100px;
+  width: 120px;
 }
 
 .info,
@@ -105,11 +105,28 @@ span {
   justify-content: flex-start;
   font-weight: 400;
 }
+.stats .stats-base {
+  display: flex;
+  justify-content: center;
+}
 
+.stats-base {
+  font-weight: 700;
+  color: #ffff;
+  display: flex;
+  margin: 0 auto;
+  border-radius: 15px;
+  background-color: rgb(229, 187, 0);
+  width: 60px;
+  padding: 5px;
+  text-align: center;
+}
+
+/* type and form */
 .pikachu-forms {
   color: white;
   text-transform: uppercase;
-  background-color: rgb(226, 208, 147);
+  background-color: rgb(229, 187, 0);
   text-align: center;
   border-radius: 3px;
   width: 65px;
@@ -126,4 +143,38 @@ span {
   box-shadow: 0px 0px 6px 5px rgb(252, 229, 101);
 }
 
-/* pikachu stats (right side) */
+/* moves */
+
+.pokemon-moves {
+  display: flex;
+  justify-content: center;
+}
+
+.pokemon-moves-table {
+  width: 40%;
+  margin-bottom: 20px;
+  border-spacing: 0;
+}
+
+table {
+  border: 1px solid rgb(216, 216, 216);
+}
+
+th,
+td {
+  border-bottom: 1px solid rgb(216, 216, 216);
+}
+
+th {
+  color: white;
+  background-color: rgb(255, 209, 6);
+  border-top: none;
+  text-align: start;
+  padding-left: 10px;
+}
+
+td {
+  background-color: rgb(255, 255, 220);
+  text-align: start;
+  padding: 5px 5px 5px 10px;
+}
