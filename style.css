@@ -1,126 +1,129 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    height: 100vh;
-    font-family: 'Open Sans', sans-serif;
+  height: 100vh;
+  font-family: 'Open Sans', sans-serif;
 }
 
 /* pokedex header bar */
 .pokedex-bar {
-    width: 100%;
-    height: 60px;
-    top: 0;
-    background-color: rgb(255, 209, 6);
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    color: white;
+  width: 100%;
+  height: 60px;
+  top: 0;
+  background-color: rgb(255, 209, 6);
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  color: white;
 }
 
 .pokedex-title {
-    margin-right: 5%;
+  margin-right: 5%;
 }
 
 /* pokemon title */
 
 .pikachu-splash {
-    margin: 10px;
-    display: flex;
-    width: 40%;
-    flex-direction: column;
-    align-items: center;
+  margin: 10px;
+  display: flex;
+  width: 40%;
+  flex-direction: column;
+  align-items: center;
 }
 
 .pikachu-title {
-    text-transform: uppercase;
-    font-weight: 500;
-    color: rgb(71, 71, 71);
+  text-transform: uppercase;
+  font-weight: 500;
+  color: rgb(71, 71, 71);
 }
 
 .pikachu-description {
-    font-weight: 400;
-    text-align: center;
-    margin-top: 5px;
-    padding: 5px;
-    border-radius: 10px;
-    background-color: rgb(255, 209, 6)
+  font-weight: 400;
+  text-align: center;
+  margin-top: 5px;
+  padding: 5px;
+  border-radius: 10px;
+  background-color: rgb(255, 209, 6);
 }
 
 .pikachu-container {
-    display: flex;
+  display: flex;
 }
 
 .pikachu-img {
-    width: 400px;
+  width: 400px;
 }
 
-.pikachu-info {
-    font-size: 1rem;
-    display: flex;
-    flex-direction: column;
-    margin: 20px;
-    width: 20%;
-    justify-content: center;
-    gap: 15px;
+/* pikachu info (left-side) */
+
+.pikachu-info,
+.pikachu-stats {
+  font-size: 1rem;
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  width: 25%;
+  justify-content: center;
+  gap: 15px;
 }
-
-.info {
-    display: flex;
-    gap: 35px;
-}
-
-
-
-
-
-/*
-.info:first-child {
-    display: flex;
-    justify-content: flex-end;
-}
-*/
 
 span {
-    width: 50px;
+  width: 100px;
+}
+
+.info,
+.stats {
+  display: flex;
+  gap: 35px;
 }
 
 .info > div > span {
-    display: flex;
-    justify-content: flex-end;
-    font-weight: 700
+  display: flex;
+  justify-content: flex-end;
+  font-weight: 700;
 }
 
-.info-value {
-    width: 150px;
-    font-size: .9rem;
-    color:rgb(34, 34, 34)
+.stats > div > span {
+  display: flex;
+  justify-content: flex-end;
+  font-weight: 700;
 }
-.info > .info-value {
-    display: flex;
-    justify-content: flex-start;
-    font-weight: 400
+
+.info-value,
+.stat-value {
+  width: 150px;
+  font-size: 0.9rem;
+  color: rgb(34, 34, 34);
+}
+.info,
+.stats > .info-value {
+  display: flex;
+  justify-content: flex-start;
+  font-weight: 400;
 }
 
 .pikachu-forms {
-    color: white;
-    text-transform: uppercase;
-    background-color: rgb(226, 208, 147);
-    text-align: center;
-    border-radius: 3px;
-    width: 65px;
+  color: white;
+  text-transform: uppercase;
+  background-color: rgb(226, 208, 147);
+  text-align: center;
+  border-radius: 3px;
+  width: 65px;
 }
 
 .pikachu-type {
-    color: white;
-    text-transform: uppercase;
-    padding: 3px;
-    background-color: rgb(255, 227, 70);
-    text-align: center;
-    width: 65px;
-    border-radius: 3px;
-    box-shadow: 0px 0px 6px 5px rgb(252, 229, 101);
+  color: white;
+  text-transform: uppercase;
+  padding: 3px;
+  background-color: rgb(255, 227, 70);
+  text-align: center;
+  width: 65px;
+  border-radius: 3px;
+  box-shadow: 0px 0px 6px 5px rgb(252, 229, 101);
 }
+
+/* pikachu stats (right side) */

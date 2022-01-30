@@ -1,63 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pikapoke</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap" rel="stylesheet">
-  </head>
-  <body>
-    <div class="pokedex">
-      <header class="pokedex-bar">
-        <h2 class="pokedex-title">PokéDex</h2>
-      </header>
-      <main class="pikachu-container">
-        <aside class="pikachu-info">
-          <div class="info">
-            <div><span>ID</span></div>
-            <div class="info-value pikachu-id"></div>
-          </div>
-          <div class="info">
-            <div><span>Height</span></div>
-            <div class="info-value pikachu-height"></div>
-          </div>
-          <div class="info">
-            <div><span>Weight</span></div>
-            <div class="info-value pikachu-weight"></div>
-          </div>
-          <div class="info">
-            <div><span>Abilities</span></div>
-            <div class="info-value pikachu-abilities"></div>
-          </div>
-          <div class="info">
-            <div><span>Type</span></div>
-            <div class="info-value pikachu-type"></div>
-          </div>
-          <div class="info">
-            <div><span>Forms</span></div>
-            <div class="info-value pikachu-forms"></div>
-          </div>
 
-        </aside>
-        <div class="pikachu-splash">
-          <h1 class="pikachu-title">pikachu</h1>
-          <h3 class="pikachu-description">Mouse Pokémon</h3>
-          <div class="pikachu-img-container">
-            <img class="pikachu-img" />
-          </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pikapoke</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <div class="pokedex">
+    <header class="pokedex-bar">
+      <h2 class="pokedex-title">PokéDex</h2>
+    </header>
+    <main class="pikachu-container">
+      <aside class="pikachu-info">
+        <div class="info">
+          <div><span>ID</span></div>
+          <div class="info-value pikachu-id"></div>
         </div>
-        <aside class="pikachu-stats"></aside>
-      </main>
-      <section class="pikachu-moves"></section>
-    </div>
-  </body>
-  <script src="pikachu.js"></script>
-  <script src="index.js"></script>
+        <div class="info">
+          <div><span>Height</span></div>
+          <div class="info-value pikachu-height"></div>
+        </div>
+        <div class="info">
+          <div><span>Weight</span></div>
+          <div class="info-value pikachu-weight"></div>
+        </div>
+        <div class="info">
+          <div><span>Abilities</span></div>
+          <div class="info-value pikachu-abilities"></div>
+        </div>
+        <div class="info">
+          <div><span>Type</span></div>
+          <div class="info-value pikachu-type"></div>
+        </div>
+        <div class="info">
+          <div><span>Forms</span></div>
+          <div class="info-value pikachu-forms"></div>
+        </div>
+
+      </aside>
+      <div class="pikachu-splash">
+        <h1 class="pikachu-title">pikachu</h1>
+        <h3 class="pikachu-description">Mouse Pokémon</h3>
+        <div class="pikachu-img-container">
+          <img class="pikachu-img" />
+        </div>
+      </div>
+      <aside class="pikachu-stats">
+        <div class="stats">
+          <div><span>HP</span></div>
+          <div class="stat-value pikachu-hp"></div>
+        </div>
+        <div class="stats">
+          <div><span>Attack</span></div>
+          <div class="stat-value pikachu-attack"></div>
+        </div>
+        <div class="stats">
+          <div><span>Defense</span></div>
+          <div class="stat-value pikachu-defense"></div>
+        </div>
+        <div class="stats">
+          <div><span>Sp. Attack</span></div>
+          <div class="stat-value pikachu-sp-attack"></div>
+        </div>
+        <div class="stats">
+          <div><span>Sp. Defense</span></div>
+          <div class="stat-value pikachu-sp-defense"></div>
+        </div>
+        <div class="stats">
+          <div><span>Speed</span></div>
+          <div class="stat-value pikachu-speed"></div>
+        </div>
+        <div class="stats">
+          <div><span>Total</span></div>
+          <div class="stat-value pikachu-total"></div>
+        </div>
+      </aside>
+    </main>
+    <section class="pikachu-moves"></section>
+  </div>
+</body>
+<script src="pikachu.js"></script>
+<script src="index.js"></script>
+
 </html>
-
-
-

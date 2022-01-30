@@ -3,7 +3,7 @@ const renderPokemonImg = (pokemon) => {
 
     const pikachuImage = document.querySelector('.pikachu-img')
     pikachuImage.setAttribute('src', urlPokemonImage)
-   
+
 }
 
 const renderPokemonInfo = (pokemon) => {
@@ -32,25 +32,54 @@ const renderPokemonInfo = (pokemon) => {
     pokemonForms.innerHTML = pokemonFormsObj
 }
 
-const renderPokemonStats = () => {}
+const renderPokemonStats = (pokemon) => {
+    const pokemonHpOjb = pokemon.stats.find(s => s.stat.name === 'hp').base_stat
+    const pokemonHp = document.querySelector('.pikachu-hp')
+    pokemonHp.innerHTML = pokemonHpOjb;
 
- const renderPokemonPreview = (pokemon) => {
+    const pokemonAttackObj = pokemon.stats.find(s => s.stat.name === 'attack').base_stat
+    const pokemonAttack = document.querySelector('.pikachu-attack')
+    pokemonAttack.innerHTML = pokemonAttackObj;
+
+    const pokemonDefenseObj = pokemon.stats.find(s => s.stat.name === 'defense').base_stat
+    const pokemonDefense = document.querySelector('.pikachu-defense')
+    pokemonDefense.innerHTML = pokemonDefenseObj;
+
+    const pokemonSpAttackObj = pokemon.stats.find(s => s.stat.name === 'special-attack').base_stat
+    const pokemonSpAttack = document.querySelector('.pikachu-sp-attack')
+    pokemonSpAttack.innerHTML = pokemonSpAttackObj;
+
+    const pokemonSpDefenseObj = pokemon.stats.find(s => s.stat.name === 'special-defense').base_stat
+    const pokemonSpDefense = document.querySelector('.pikachu-sp-defense')
+    pokemonSpDefense.innerHTML = pokemonSpDefenseObj;
+
+    const pokemonSpeedObj = pokemon.stats.find(s => s.stat.name === 'speed').base_stat
+    const pokemonSpeed = document.querySelector('.pikachu-speed')
+    pokemonSpeed.innerHTML = pokemonSpeedObj;
+
+    const pokemonTotalObj = pokemon['stats'].map(s => s.base_stat).reduce((acc, prev) => acc + prev)
+    const pokemonTotal = document.querySelector('.pikachu-total')
+    pokemonTotal.innerHTML = pokemonTotalObj
+
+}
+
+const renderPokemonPreview = (pokemon) => {
     renderPokemonInfo(pokemon);
     renderPokemonImg(pokemon);
-   // renderPokemonStats(pokemon);
+    renderPokemonStats(pokemon);
 }
 renderPokemonPreview(pikachu)
 
 
 //this function will call the require function to populate the pokemon template pages
- const fillPokemonPage = (pokemon) => {
+const fillPokemonPage = (pokemon) => {
     renderPokemonPreview(pokemon);
 }
 
 
 
- function getAbilities (pokemon) {
-    const abilities = pokemon['abilities'].map( n => n.ability.name)
+function getAbilities(pokemon) {
+    const abilities = pokemon['abilities'].map(n => n.ability.name)
     console.log(abilities)
     return abilities
 }
