@@ -65,7 +65,7 @@ const renderPokemonMoves = (pokemon) => {
     let pokemonMoves = []
     pokemon.moves.forEach((m, i) => {
         if (i <= 10) {
-            pokemonMoves.push([`${m.move.name}`, `${m['version_group_details'][0].move_learn_method.name}`])
+            pokemonMoves.push([`${m.move.name.toUpperCase().replaceAll('-', ' ')}`, `${m['version_group_details'][0].move_learn_method.name}`])
         }
     })
     pokemonMoves.forEach(m => {
@@ -94,7 +94,7 @@ const fillPokemonPage = (pokemon) => {
 }
 
 function getAbilities(pokemon) {
-    const abilities = pokemon['abilities'].map(n => n.ability.name)
+    const abilities = pokemon['abilities'].map(n => n.ability.name.toUpperCase())
     console.log(abilities)
     return abilities
 }
