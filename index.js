@@ -32,27 +32,27 @@ const renderPokemonInfo = (pokemon) => {
 }
 
 const renderPokemonStats = (pokemon) => {
-    const pokemonHpOjb = pokemon.stats.find(s => s.stat.name === 'hp').base_stat
+    const pokemonHpOjb = getStatValue(pokemon, 'hp')
     const pokemonHp = document.querySelector('.pokemon-hp')
     pokemonHp.innerHTML = pokemonHpOjb;
 
-    const pokemonAttackObj = pokemon.stats.find(s => s.stat.name === 'attack').base_stat
+    const pokemonAttackObj = getStatValue(pokemon, 'attack')
     const pokemonAttack = document.querySelector('.pokemon-attack')
     pokemonAttack.innerHTML = pokemonAttackObj;
 
-    const pokemonDefenseObj = pokemon.stats.find(s => s.stat.name === 'defense').base_stat
+    const pokemonDefenseObj = getStatValue(pokemon, 'defense')
     const pokemonDefense = document.querySelector('.pokemon-defense')
     pokemonDefense.innerHTML = pokemonDefenseObj;
 
-    const pokemonSpAttackObj = pokemon.stats.find(s => s.stat.name === 'special-attack').base_stat
+    const pokemonSpAttackObj = getStatValue(pokemon, 'special-attack')
     const pokemonSpAttack = document.querySelector('.pokemon-sp-attack')
     pokemonSpAttack.innerHTML = pokemonSpAttackObj;
 
-    const pokemonSpDefenseObj = pokemon.stats.find(s => s.stat.name === 'special-defense').base_stat
+    const pokemonSpDefenseObj = getStatValue(pokemon, 'special-defense')
     const pokemonSpDefense = document.querySelector('.pokemon-sp-defense')
     pokemonSpDefense.innerHTML = pokemonSpDefenseObj;
 
-    const pokemonSpeedObj = pokemon.stats.find(s => s.stat.name === 'speed').base_stat
+    const pokemonSpeedObj = getStatValue(pokemon, 'speed')
     const pokemonSpeed = document.querySelector('.pokemon-speed')
     pokemonSpeed.innerHTML = pokemonSpeedObj;
 
@@ -97,4 +97,8 @@ function getAbilities(pokemon) {
     const abilities = pokemon['abilities'].map(n => n.ability.name)
     console.log(abilities)
     return abilities
+}
+
+function getStatValue(pokemon, statName) {
+    return pokemon.stats.find(s => s.stat.name === statName).base_stat
 }
