@@ -19,6 +19,7 @@ body {
   justify-content: flex-end;
   align-items: center;
   color: white;
+  box-shadow: 6px 7px 18px 4px rgba(179, 179, 179, 0.37);
 }
 
 .pokedex-title {
@@ -27,7 +28,7 @@ body {
 
 /* pokemon title */
 
-.pikachu-splash {
+.pokemon-splash {
   margin: 10px;
   display: flex;
   width: 40%;
@@ -35,13 +36,14 @@ body {
   align-items: center;
 }
 
-.pikachu-title {
+.pokemon-title {
   text-transform: uppercase;
   font-weight: 500;
   color: rgb(71, 71, 71);
+  margin-top: 20px;
 }
 
-.pikachu-description {
+.pokemon-description {
   font-weight: 400;
   text-align: center;
   margin-top: 5px;
@@ -50,18 +52,18 @@ body {
   background-color: rgb(255, 209, 6);
 }
 
-.pikachu-container {
+.pokemon-container {
   display: flex;
 }
 
-.pikachu-img {
+.pokemon-img {
   width: 400px;
 }
 
 /* pikachu info (left-side) */
 
-.pikachu-info,
-.pikachu-stats {
+.pokemon-info,
+.pokemon-stats {
   font-size: 1rem;
   display: flex;
   flex-direction: column;
@@ -93,12 +95,18 @@ span {
   font-weight: 700;
 }
 
-.info-value,
-.stat-value {
+.info-value {
   width: 150px;
   font-size: 0.9rem;
   color: rgb(34, 34, 34);
 }
+
+.stat-value {
+  width: 50px;
+  font-size: 0.9rem;
+  color: rgb(34, 34, 34);
+}
+
 .info,
 .stats > .info-value {
   display: flex;
@@ -123,7 +131,7 @@ span {
 }
 
 /* type and form */
-.pikachu-forms {
+.pokemon-forms {
   color: white;
   text-transform: uppercase;
   background-color: rgb(229, 187, 0);
@@ -132,7 +140,7 @@ span {
   width: 65px;
 }
 
-.pikachu-type {
+.pokemon-type {
   color: white;
   text-transform: uppercase;
   padding: 3px;
@@ -174,7 +182,7 @@ th {
 }
 
 td {
-  background-color: rgb(255, 255, 220);
+  background-color: rgb(255, 248, 210);
   text-align: start;
-  padding: 5px 5px 5px 10px;
+  padding: 3px 3px 3px 10px;
 }
